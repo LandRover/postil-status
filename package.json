@@ -1,0 +1,43 @@
+{
+  "name": "PostIL-Status",
+  "version": "0.0.1",
+  "description": "Israel's Post Package Status Tracker",
+  "main": "src/postil.js",
+  "devDependencies": {
+    "blanket": "^1.2.1",
+    "eslint": "^1.10.3",
+    "mocha": "^2.3.3",
+    "chai": "^3.4.1",
+    "sinon": "^1.17.2",
+    "sinon-chai": "^2.8.0",
+    "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "winston": "^2.1.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [
+        "src"
+      ],
+      "data-cover-never": "node_modules"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LandRover/PostIL-Status.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LandRover/PostIL-Status/issues"
+  },
+  "scripts": {
+    "test": "mocha && mocha test --require blanket --reporter html-cov > coverage.html"
+  },
+  "keywords": [
+    "postil",
+    "packages",
+    "tracking"
+  ],
+  "author": "Oleg Glozman",
+  "license": "MIT"
+}
