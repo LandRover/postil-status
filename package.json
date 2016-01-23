@@ -1,5 +1,5 @@
 {
-  "name": "PostIL-Status",
+  "name": "postil-status",
   "version": "0.0.1",
   "description": "Israel's Post Package Status Tracker",
   "main": "src/postil.js",
@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LandRover/PostIL-Status.git"
+    "url": "https://github.com/LandRover/postil-status.git"
   },
   "bugs": {
-    "url": "https://github.com/LandRover/PostIL-Status/issues"
+    "url": "https://github.com/LandRover/postil-status/issues"
   },
   "scripts": {
     "test": "mocha && mocha test --require blanket --reporter html-cov > coverage.html"
