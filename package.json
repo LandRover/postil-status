@@ -1,6 +1,6 @@
 {
   "name": "postil-status",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Israel's Post Package Status Tracker",
   "main": "src/postil.js",
   "devDependencies": {
