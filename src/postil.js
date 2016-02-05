@@ -1,7 +1,6 @@
 'use strict';
 
-const _ = require('lodash'),
-      languageDefault = 'EN',
+const languageDefault = 'EN',
       requestInfo = {
           postil: {
               url: 'http://www.israelpost.co.il/itemtrace.nsf/trackandtraceJSON'
@@ -18,7 +17,7 @@ class PostIL {
      * 
      */
     constructor(options, Logger, PackageModel, Request) {
-        _.extend(this, {
+        Object.assign(this, {
             Logger: Logger || require('./utils/logger'), // logger can be passed externally.
             PackageModel: PackageModel || require('./model/package'), // can be mocked in testing.
             Request: Request || require('request-promise') // can be mocked in testing.

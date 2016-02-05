@@ -1,6 +1,5 @@
 'use strict';
 
-const _ = require('lodash');
 
 
 /**
@@ -16,7 +15,7 @@ class Package {
      * @param {Object} packageData - contains the package data from post's server.
      */
     constructor(trackingID, packageData) {
-        _.extend(this, {
+        Object.assign(this, {
             trackingID: trackingID
         }, packageData);
     }
