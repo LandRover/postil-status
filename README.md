@@ -11,14 +11,14 @@ Responses are returned as a Promise and make it easy to chain and track.
 
 Add `postil-status` you your package.json file and install it via npm install.
 
-```
-npm install postil-status --save-dev
+```console
+$ npm install postil-status --save-dev
 ```
 
 ### Example code
 
 
-```
+```js
 const PostILStatus = require('postil-status');
 
 let PostIL = new PostILStatus(),
@@ -33,20 +33,20 @@ PostIL.getStatus(trackingID).then(packageModel => {
 
 ### Language override
 
-To specify for the API a spesific specific response lanugage, it should passed as the first property for the contructor.
-```
+To specify for the API a specific specific response language, it should passed as the first property for the constructor.
+```js
 let PostIL = new PostILStatus({language: 'HE'});
 ```
 
 
 ## Building
 Clone this repo (or fork it)
-```
-git clone git@github.com:landrover/postil-status.git
+```console
+$ git clone git@github.com:landrover/postil-status.git
 ```
 Install deps
-```
-npm install
+```console
+$ npm install
 ```
 
 ### Todo

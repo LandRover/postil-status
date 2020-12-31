@@ -1,12 +1,28 @@
-'use strict';
+const winston = require('winston');
 
-const Logger = require('winston');
-Logger.level = 'silly';
-
-Logger.add(Logger.transports.File, {
-    filename: 'postil.log'
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    defaultMeta: { service: 'postil-package' },
+    transports: [
+        //
+        // - Write all logs with level `error` and below to `error.log`
+        // - Write all logs with level `info` and below to `combined.log`
+        //
+        new winston.transports.File({ filename: 'error.log', level: 'error' }),
+        new winston.transports.File({ filename: 'combined.log' }),
+    ],
 });
 
-Logger.remove(Logger.transports.Console);
 
-module.exports = Logger;
+//
+// If we're not in production then log to the `console` with the format:
+// `${info.level}: ${info.message} JSON.stringify({ ...rest }) `
+//
+if (process.env.NODE_ENV !== 'production') {
+    logger.add(new winston.transports.Console({
+        format: winston.format.simple(),
+    }));
+}
+
+module.exports = logger;

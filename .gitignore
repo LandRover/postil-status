@@ -1,7 +1,6 @@
 # Logs
 logs
 *.log
-npm-debug.log*
 
 # Runtime data
 pids
@@ -31,3 +30,6 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+
+*-lock.json
+
